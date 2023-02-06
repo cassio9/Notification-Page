@@ -29,22 +29,24 @@ function App() {
 	};
 
 	return (
-		<main className="font-PlusJakartaSans p-4">
-			<div className="flex justify-between items-center mb-5">
-				<h1 className="text-lg font-bold">
-					Notifications
-					<span className=" text-sm py-1 px-2 bg-Blue rounded-lg text-white">
-						{notificationsCount}
-					</span>
-				</h1>
-				<p className="text-GrayishBlue" onClick={MarkAllAsRead}>
-					Mark all as read
-				</p>
-			</div>
-			<div className="flex flex-col gap-4">
-				{messages.map((message) => {
-					return <Message key={message.id} {...message} changeStatusById={changeStatusById} />;
-				})}
+		<main className="font-PlusJakartaSans bg-LightGrayishBlue2 min-h-screen max-h-fit  md:py-10">
+			<div className="bg-white p-4 max-w-[44rem] mx-auto lg:rounded-xl w-full">
+				<div className="flex justify-between items-center mb-5">
+					<h1 className="text-lg font-bold">
+						Notifications
+						<span className=" text-sm py-1 px-2 bg-Blue rounded-md text-white ml-2">
+							{notificationsCount}
+						</span>
+					</h1>
+					<p className="text-GrayishBlue hover:cursor-pointer" onClick={MarkAllAsRead}>
+						Mark all as read
+					</p>
+				</div>
+				<div className="flex flex-col gap-4">
+					{messages.map((message) => {
+						return <Message key={message.id} {...message} changeStatusById={changeStatusById} />;
+					})}
+				</div>
 			</div>
 		</main>
 	);
