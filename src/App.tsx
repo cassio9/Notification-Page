@@ -29,7 +29,7 @@ function App() {
 	};
 
 	return (
-		<main className="font-PlusJakartaSans bg-LightGrayishBlue2 min-h-screen max-h-fit  md:py-10">
+		<main className="font-PlusJakartaSans bg-LightGrayishBlue1 min-h-screen max-h-fit  md:py-10">
 			<div className="bg-white p-4 max-w-[44rem] mx-auto lg:rounded-xl w-full">
 				<div className="flex justify-between items-center mb-5">
 					<h1 className="text-lg font-bold">

@@ -14,7 +14,7 @@ const Message = ({
 	changeStatusById,
 }: Props) => {
 	return (
-		<article
+		<div
 			id={id}
 			onClick={() => {
 				changeStatusById(id);
@@ -45,7 +45,7 @@ const Message = ({
 					</p>
 				)}
 			</div>
-		</article>
+		</div>
 	);
 };
 
