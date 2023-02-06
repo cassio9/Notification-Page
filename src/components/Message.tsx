@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { Props, data } from "../data";
+import { Props } from "../data";
 
 const Message = ({
 	name,
@@ -12,20 +11,14 @@ const Message = ({
 	picComment,
 	read,
 	id,
+	changeStatusById,
 }: Props) => {
-	function changeRead(id: string) {
-		data.map((message: Props) => {
-			return message.id == id ? { ...message, read: true } : message;
-		});
-		return data;
-	}
-
-	console.log(data);
-
 	return (
 		<article
-			onClick={() => changeRead(id)}
 			id={id}
+			onClick={() => {
+				changeStatusById(id);
+			}}
 			className={` p-4 rounded-lg flex gap-4 items-start ${
 				!read ? "bg-LightGrayishBlue1 cursor-pointer" : "bg-white"
 			}`}>

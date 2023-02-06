@@ -7,9 +7,13 @@ import Nathan from "./assets/images/avatar-nathan-peterson.webp";
 import Anna from "./assets/images/avatar-anna-kim.webp";
 import Chess from "./assets/images/image-chess.webp";
 
-export interface Props {
-	name: string;
+export interface Props extends data {
+	changeStatusById: any;
+}
+
+interface data {
 	id: string;
+	name: string;
 	action?: string;
 	message?: string;
 	place?: string;
@@ -20,7 +24,7 @@ export interface Props {
 	read: boolean;
 }
 
-export const data: Props[] = [
+export const data: data[] = [
 	{
 		id: "1",
 		name: "Mark Webber",
